@@ -1,5 +1,5 @@
 #!/bin/bash
 
-SYSTEM_STATS="System Check: Root Disk Available is $( df | awk 'FNR == 3 {print $5}')"
+SYSTEM_STATS="System Check: RAM Available is $(free | awk 'FNR == 2 {print $7}')"
 
 echo "$SYSTEM_STATS"
